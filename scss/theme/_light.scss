@@ -1,0 +1,16 @@
+@use "../abtracts";
+html {
+    --body-bg: #f6f6f6;
+    --text-color: #1a162e;
+    --icon-color: brightness(0) saturate(100%) invert(6%) sepia(49%)
+        saturate(1831%) hue-rotate(226deg) brightness(96%) contrast(93%);
+
+    --header-bg-color: #eee;
+    --action-top-group-bg: #fff;
+    --action-top-group-shadow: rgba(237, 237, 246, 0.2);
+    --action-top-saparate-bg: #ededf6;
+    --action-top-user-shadow: rgba(0, 0, 0, 0.08);
+    @include abtracts.breakpoints(lg) {
+        --header-bg-color: #fff;
+    }
+}

@@ -1,0 +1,31 @@
+@use "../abtracts";
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+
+    @include abtracts.breakpoints(lg) {
+        column-gap: 10px;
+        margin-left: 50px;
+    }
+
+    @include abtracts.breakpoints(sm) {
+        margin-left: 0px;
+    }
+
+    &__img {
+        @include abtracts.breakpoints(lg) {
+            width: 24px;
+        }
+    }
+
+    &__title {
+        /* Bold 22 */
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.45455; /* 32px */
+        @include abtracts.breakpoints(lg) {
+            font-size: 1.8rem;
+        }
+    }
+}
