@@ -1,0 +1,155 @@
+@use "../abtracts";
+
+$error-colors: #ed4337;
+.form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &__group {
+        margin-top: 30px;
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+
+        @include abtracts.screen(md) {
+            margin-top: 20px;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-colors;
+            background: rgba($color: $error-colors, $alpha: 0.1);
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+
+        .form__input-icon-message,
+        .form__message-err {
+            display: block;
+        }
+    }
+
+    &__text-input {
+        border-radius: 10px;
+        border: 1.5px solid var(--form-border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding: 12px 17px 12px 12px;
+        &:focus-within {
+            border-color: #77dae6;
+        }
+
+        @include abtracts.screen(md) {
+            height: 48px;
+        }
+    }
+
+    &__input-icon-message {
+        display: none;
+        margin-left: 14px;
+        animation: shake 0.4s;
+    }
+
+    &__message-err {
+        margin-top: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: left;
+        padding-left: 5px;
+        color: $error-colors;
+        display: none;
+    }
+
+    &__input {
+        flex: 1;
+        height: 100%;
+        font-weight: 500;
+        line-height: 144.444%;
+        font-size: 1.8rem;
+
+        &::placeholder {
+            color: var(--form-placeholder-color);
+        }
+
+        &-icon {
+            margin-left: 12px;
+        }
+
+        @include abtracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__input-icon-message {
+        width: 16px;
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 18.5px;
+            height: 18.5px;
+            border: 1.5px solid #9e9da8;
+            border-radius: 5px;
+        }
+
+        &-label {
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            margin-left: 28.5px;
+
+            @include abtracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            background: #ffb700;
+            border-color: #ffb700;
+        }
+
+        &::after {
+            top: 6px;
+            left: 2px;
+            width: 14.5px;
+            height: 5.5px;
+            border: 2px solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+        }
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%; /* 145.455% */
+    }
+
+    
+}

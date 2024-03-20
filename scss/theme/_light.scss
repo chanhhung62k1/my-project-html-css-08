@@ -2,15 +2,68 @@
 html {
     --body-bg: #f6f6f6;
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(6%) sepia(49%)
-        saturate(1831%) hue-rotate(226deg) brightness(96%) contrast(93%);
+    --icon-color: brightness(0) saturate(100%) invert(6%) sepia(49%) saturate(1831%) hue-rotate(226deg) brightness(96%)
+        contrast(93%);
 
     --header-bg-color: #eee;
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #6e6d74;
     --action-top-group-bg: #fff;
     --action-top-group-shadow: rgba(237, 237, 246, 0.2);
     --action-top-saparate-bg: #ededf6;
     --action-top-user-shadow: rgba(0, 0, 0, 0.08);
-    @include abtracts.breakpoints(lg) {
+    @include abtracts.screen(lg) {
         --header-bg-color: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
+
+    //___________________________drop-down___________________________
+    --drop-down-bg-color: #fff;
+    --drop-down-shadow-color: rgba(200, 200, 200, 0.4);
+    --top-menu-border-color: #d2d1d6;
+    --column-heading-color: #1a162e;
+    //___________________________slide-bar___________________________
+    --slide-bar-bg-color: #fff;
+    --slide-bar-shadow-color: rgba(200, 200, 200, 0.4);
+    //___________________________categories-item___________________________
+    --categories-item-bg-color: #eee;
+    --categories-item-thumbnail-bg-color: #fff;
+    --categories-item-title-color: #000;
+
+    @include abtracts.screen(lg) {
+        --categories-item-bg-color: #fff;
+    }
+
+    //buttons
+
+    --filter-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+
+    //card-products
+    --card-products-background: #fff;
+    --card-products--shadow-color: rgba(237, 237, 246, 0.2);
+
+    //filter
+    --filter-form-bg: #fff;
+    --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
+    --row-bottom-bg: #fff;
+    --tag-bg-color: #f8f8fb;
+    --text-color-submit: #1a162e;
+
+    //auth
+    --auth-intro-bg-color: #fafafd;
+    --auth-content-bg-color: #fff;
+    --auth-content-color: #9e9da8;
+    --form-placeholder-color: #d2d1d6;
+    --form-border-color: #d2d1d6;
+    @include abtracts.screen(md) {
+        --auth-intro-bg-color: #fff;
+    }
+
+    //products-details
+    --product-detail-bg-color: #fff;
+
+    //breadcumbs
+    --breadcumbs-bg-color: #f6f6f6;
+    --breadcumbs-box-shadow-color: rgba(237, 237, 246, 0.2);
 }

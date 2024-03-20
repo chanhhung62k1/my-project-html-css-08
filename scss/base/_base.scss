@@ -1,8 +1,7 @@
+@use "../abtracts";
 *,
 ::before,
 ::after {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -12,7 +11,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: Gordita, serif;
+    font-family: Gordita, sans-serif;
     color: var(--text-color);
     background: var(--body-bg);
 }
@@ -26,15 +25,37 @@ button {
     outline: none;
     border: none;
     background: transparent;
+    cursor: pointer;
+    padding: 0;
 }
 
+a,
+img,
 button,
-select,
-textarea input {
+input,
+label,
+textarea,
+select {
+    padding: 0;
     font-family: inherit;
     color: inherit;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+    background: transparent;
 }
 
 .icon {
     filter: var(--icon-color);
+}
+
+.container {
+    @include abtracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 }
