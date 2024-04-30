@@ -1,0 +1,27 @@
+
+.search-bar {
+    background: var(--search-bar-background);
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 50px;
+    overflow: hidden;
+
+    &__input {
+        flex: 1;
+        height: 100%;
+        padding-left: 15px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &::placeholder {
+        color: #9e9da8;
+    }
+
+    &__submit {
+        height: 100%;
+        padding: 0 15px;
+        font-weight: 400;
+    }
+}

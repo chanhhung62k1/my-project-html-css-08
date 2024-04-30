@@ -53,6 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     height: 46px;
     padding: 0 20px;
@@ -63,6 +64,11 @@
     white-space: nowrap;
     user-select: none;
 
+    &--small {
+        height: 40px;
+        padding: 0 18px;
+    }
+
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
@@ -71,13 +77,18 @@
 
     &--text {
         background: transparent;
-        color: #9e9da8;
         font-weight: 400;
     }
 
     &--primary {
         background: #ffb700;
         color: #171c28;
+    }
+
+    &--danger {
+        background: #ed4337;
+        color: #fff;
+
     }
 
     &--outline {

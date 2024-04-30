@@ -46,18 +46,6 @@
     &-form {
         margin-top: 30px;
 
-        &__label {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 145.455%; /* 145.455% */
-            &--size {
-                font-size: 1.4rem;
-                line-height: 142.857%; /* 142.857% */
-                margin-bottom: 10px;
-            }
-        }
-
         &__group {
             margin-top: 20px;
             &--inline {
@@ -93,8 +81,7 @@
             }
         }
 
-        &__text-input,
-        &__select-wrap {
+        &__text-input {
             border-radius: 6px;
             border: 1px solid #d2d1d6;
         }
@@ -139,62 +126,6 @@
 
         &__input-icon {
             margin-left: 12px;
-        }
-
-        &__select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-        }
-
-        &__select {
-            min-width: var(--width, 108px);
-            height: calc(100% - 10px);
-            padding: 0 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            cursor: pointer;
-
-            @include abtracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &__select + &__select {
-            border-left: 1px solid #d2d1d6;
-        }
-
-        &__select-arrow {
-            width: 24px;
-            height: 24px;
-        }
-
-        &__tags {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 10px 20px;
-            @include abtracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &__tag {
-            color: #9e9da8;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            padding: 6px 12px;
-            border-radius: 6px;
-            background: var(--tag-bg-color);
-            &:hover {
-                color: var(--text-color);
-                transition: color 0.2s;
-            }
         }
     }
 

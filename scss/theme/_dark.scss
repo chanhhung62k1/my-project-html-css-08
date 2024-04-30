@@ -7,9 +7,6 @@ html.dark {
 
     --header-bg-color: #171c28;
 
-    --footer-bg-color: var(--header-bg-color);
-
-    --footer-bg-color: var(--header-bg-color);
     @include abtracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
@@ -18,6 +15,15 @@ html.dark {
     --action-top-group-shadow: rgba(0, 0, 0, 0.2);
     --action-top-saparate-bg: #ededf6;
     --action-top-user-shadow: rgba(0, 0, 0, 0.08);
+
+    --act-dropdown-bg-color: #2f3441;
+    --act-dropdown-box-shadow-color: rgba(23, 28, 40, 0.4);
+    --act-dropdown-view-all-color: #0071dc;
+    --act-dropdown-separate-bg-color: #171c28;
+    --act-dropdown-text-color: #b9babe;
+
+    --footer-bg-color: var(--header-bg-color);
+    --footer-bg-color: var(--header-bg-color);
 
     --drop-down-bg-color: #2f3441;
     --drop-down-shadow-color: rgba(23, 28, 40, 0.4);
@@ -61,6 +67,9 @@ html.dark {
     --auth-content-color: #b9babe;
     --form-placeholder-color: #b9babe;
     --form-border-color: #b9babe;
+    --form-select-dialog-background-color: #2f3441;
+    --form-select-dialog-boxshadow-color: rgba($color: #fff, $alpha: 0.2);
+    --form-select-dialog-hover-background-color: #292e39;
     @include abtracts.screen(md) {
         --auth-intro-bg-color: #171c28;
     }
@@ -68,7 +77,63 @@ html.dark {
     //products-details
     --product-detail-bg-color: #292e39;
 
+    //.search-bar
+    --search-bar-background: #171c28;
+
     //breadcumbs
     --breadcumbs-bg-color: #171c28;
     --breadcumbs-box-shadow-color: rgba(23, 28, 40, 0.2);
+
+    //prod-info
+    --prod-info-container-background: #292e39;
+    --prod-info-background: #171c28;
+    --prod-prop-text-color: #eee;
+    --prod-info-price-color: #eee;
+
+    @include abtracts.screen(lg) {
+        --prod-info-background: #171c28;
+    }
+
+    //prod-tabs
+    --prod-tab-active-color: #fff;
+    --prod-tab-heading-color: #fff;
+
+    //preview-card-background
+    --preview-card-bg-color: #171c28;
+
+    //text-content
+    --text-content-hr-bg-color: #ccc;
+
+    //checkout-breadcumbs
+    --background-breadcumbs-page-color: #171c28;
+
+    //checkout-cart-info
+    --cart-info-background-color: #171c28;
+    --cart-info-boxshadow-color: rgba(23, 28, 40, 0.2);
+    --cart-info-price-color: #b9babe;
+    --cart-info-continue-color: #b9babe;
+    --cart-info-sub-total: #b9babe;
+
+    //checkout-cart-item
+    --cart-item-color: #b9babe;
+    --cart-item-input-color: #292e39;
+    --cart-item-separate-color: #292e39;
+
+    //checkout-gift-item
+    --gift-color: #b9babe;
+    --gift-item-background-color: #292e39;
+    --gift-item-boxshadow-color: initial;
+
+    //modal
+    --modal-background-color: #2f3441;
+    --modal-boxshadow-color: rgba(23, 28, 40, 0.4);
+
+    //shipping
+    --shipping-text-color: #b9babe;
+
+    //payment-item
+    --payment-item-background-color: #292e39;
+    --payment-item-boxshadow-color: rgba(23, 28, 40, 0.2);
+    --payment-item-img-boxshadow-color: rgba(23, 28, 40, 0.2~);
+    --payment-item-color: #b9babe;
 }

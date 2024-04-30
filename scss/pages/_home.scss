@@ -1,5 +1,6 @@
 @use "../abtracts";
 .home {
+    margin-bottom: 60px;
     &__container {
         margin-top: 40px;
         @include abtracts.screen(md) {

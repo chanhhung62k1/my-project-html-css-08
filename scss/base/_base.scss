@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -44,9 +48,30 @@ select {
     -webkit-tap-highlight-color: transparent;
 }
 
+input:-webkit-auto-fill,
+input:-webkit-auto-fill:focus,
+
+input:-webkit-auto-fill:active,
+
+input:-webkit-auto-fill:hover {
+    transition: background-color 1s 9999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
 input,
 textarea {
     background: transparent;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
 }
 
 .icon {

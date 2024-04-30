@@ -5,6 +5,8 @@
 }
 
 .header {
+    position: relative;
+    z-index: 2;
     background: var(--header-bg-color);
     @include abtracts.screen(lg) {
         box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
@@ -212,9 +214,21 @@
         padding: 13px;
     }
 
+    &__btn-wrap {
+        position: relative;
+        height: 100%;
+
+        &:hover .act-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease-in;
+        }
+    }
+
     &__btn {
         @extend %flexItemcenter;
         width: 100%;
+        height: 100%;
         padding: 13px;
         column-gap: 10px;
         padding: 10px 20px;
@@ -263,5 +277,144 @@
     @include abtracts.screen(sm) {
         padding: 0 20px;
         height: 44px;
+    }
+}
+
+.act-dropdown {
+    position: absolute;
+    top: 48px;
+    right: -70px;
+    padding-top: 28px;
+    opacity: 0;
+    visibility: hidden;
+
+    &__innder {
+        position: relative;
+        width: min(645px, 100vw);
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--act-dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--act-dropdown-box-shadow-color);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: -11px;
+        right: 100px;
+        height: 20.5px;
+        filter: var(--dropdown-arrow-color);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__view-all {
+        color: var(--act-dropdown-view-all-color);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 145.455%;
+    }
+
+    &__separate {
+        height: 1px;
+        width: 100%;
+        background: var(--act-dropdown-separate-bg-color);
+        margin: 30px 0;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    &__list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 16px;
+    }
+
+    &__label {
+        color: var(--act-dropdown-text-color);
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 145.455%;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+
+    &__value {
+        color: var(--act-dropdown-text-color);
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 145.455%;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        &-btn {
+            min-width: 278px;
+            height: 56px !important;
+            font-size: 1.8rem !important;
+        }
+    }
+}
+
+.cart-preview-item {
+    text-align: left;
+
+    &__wrap-img {
+        position: relative;
+        padding-top: 100%;
+        border: 0.5px solid var(--act-dropdown-separate-bg-color);
+        border-radius: 5px;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        color: var(--act-dropdown-text-color);
+        margin-top: 14px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+
+    &__price {
+        margin-top: 6px;
+        color: var(--act-dropdown-text-color);
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
     }
 }
