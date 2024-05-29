@@ -1,0 +1,24 @@
+.form-card {
+    &__back-arrow {
+        height: 50px;
+        padding-right: 16px;
+        position: relative;
+        top: 10px;
+    }
+
+    &__label {
+        margin-bottom: 20px;
+
+        &--checkbox {
+            margin-bottom: 14px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 30px;
+    }
+}

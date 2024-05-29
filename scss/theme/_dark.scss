@@ -13,7 +13,7 @@ html.dark {
 
     --action-top-group-bg: #292e39;
     --action-top-group-shadow: rgba(0, 0, 0, 0.2);
-    --action-top-saparate-bg: #ededf6;
+    --action-top-saparate-bg: #545458;
     --action-top-user-shadow: rgba(0, 0, 0, 0.08);
 
     --act-dropdown-bg-color: #2f3441;
@@ -136,4 +136,14 @@ html.dark {
     --payment-item-boxshadow-color: rgba(23, 28, 40, 0.2);
     --payment-item-img-boxshadow-color: rgba(23, 28, 40, 0.2~);
     --payment-item-color: #b9babe;
+
+    //profile-sidebar
+    --profile-sidebar-background-color: #171c28;
+    --profile-sidebar-boxshadow-color: rgba(23, 28, 40, 0.2);
+    --profile-sidebar-color: #B9BABE;
+    --profile-sidebar-link-hover:#2f3441;
+
+    //account
+    --account-info-background-color: #292E39;
+    --account-info-background-color-icon: #171c28;
 }

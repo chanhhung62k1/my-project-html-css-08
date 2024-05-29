@@ -143,7 +143,17 @@ html {
 
     //payment-item
     --payment-item-background-color: #f6f6f6;
-    --payment-item-boxshadow-color: rgba(237, 237,  246, 0.2);
+    --payment-item-boxshadow-color: rgba(237, 237, 246, 0.2);
     --payment-item-img-boxshadow-color: rgba(237, 237, 246, 0.2);
     --payment-item-color: #1a162e;
+
+    //profile-sidebar
+    --profile-sidebar-background-color: #fff;
+    --profile-sidebar-boxshadow-color: rgba(237, 237, 246, 0.2);
+    --profile-sidebar-color: #1A162E;
+    --profile-sidebar-link-hover:#ebebeb;
+
+    //account
+    --account-info-background-color: #f6f6f6;
+    --account-info-background-color-icon: #fff;
 }

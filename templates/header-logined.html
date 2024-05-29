@@ -16,11 +16,14 @@
                 <span class="nav-btn__title">Cart</span>
                 <span class="nav-btn__qtt">3</span>
             </a>
-            <a href="#" class="nav-btn d-none d-md-flex">
+            <a href="!#" class="nav-btn d-none d-md-flex">
                 <img src="../assets/icons/hearth.svg" alt="" class="nav-btn__icon icon" />
                 <span class="nav-btn__title">Favorite</span>
                 <span class="nav-btn__qtt">3</span>
             </a>
+
+            <!--dropdown-->
+
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
@@ -4658,7 +4661,7 @@
                             <img src="../assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow icon" />
                             <div class="act-dropdown__top">
                                 <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="./check-out.html" class="act-dropdown__view-all">See All</a>
+                                <a href="./favourite.html" class="act-dropdown__view-all">See All</a>
                             </div>
                             <div class="row row-cols-3 act-dropdown__list">
                                 <div class="col">
@@ -4705,7 +4708,7 @@
                             <div class="act-dropdown__separate"></div>
                             <div class="act-dropdown__checkout">
                                 <a
-                                    href="./check-out.html"
+                                    href="./favourite.html"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
                                 >
                                     Check Out All
@@ -4732,7 +4735,7 @@
                             <img src="../assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow icon" />
                             <div class="act-dropdown__top">
                                 <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="#!" class="act-dropdown__view-all">See All</a>
+                                <a href="./check-out.html" class="act-dropdown__view-all">See All</a>
                             </div>
                             <div class="row row-cols-3 act-dropdown__list">
                                 <div class="col">
@@ -4809,6 +4812,43 @@
             </div>
             <div class="action-top__info-user">
                 <img src="./assets/img/avt.jpg" alt="" class="action-top__user" />
+                <!--drop-down-user-->
+                <div class="act-dropdown action-top__dropdown">
+                    <div class="act-dropdown__innder user-menu">
+                        <img
+                            src="./assets/icons/arrow-up.png"
+                            alt=""
+                            class="act-dropdown__arrow action-top__arrow icon"
+                        />
+                        <div class="user-menu__top">
+                            <img src="./assets/img/avt.jpg" alt="" class="user-menu__avatar action-top__user" />
+                            <div>
+                                <p class="user-menu__user">John Smith</p>
+                                <p class="user-menu__username">@John Smith</p>
+                            </div>
+                        </div>
+                        <ul class="user-menu__list">
+                            <li class="user-menu__seperate">
+                                <a href="./profile.html" class="user-menu__link"> Profile </a>
+                            </li>
+                            <li>
+                                <a href="./favourite.html" class="user-menu__link"> Favourite List </a>
+                            </li>
+                            <li class="user-menu__seperate">
+                                <a href="#!" id="switch-theme-btn" class="user-menu__link">
+                                    <span>Dark Mode</span>
+                                    <img src="./assets/icons/light.svg" alt="" class="icon user-menu__icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="user-menu__link"> Settings </a>
+                            </li>
+                            <li class="user-menu__seperate">
+                                <a href="./sign-in.html" class="user-menu__link"> Log-out </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
 }
 .top-bar {
     @extend %flexItemcenter;
-    padding: 30px 0;
+    padding: 20px 0;
     position: relative;
     z-index: 1;
 
@@ -247,6 +247,24 @@
         background: var(--action-top-saparate-bg);
     }
 
+    &__info-user {
+        position: relative;
+
+        &:hover .act-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__dropdown {
+        right: -15px !important;
+        width: min(300px, 100vw) !important;
+    }
+
+    &__arrow {
+        right: 6px !important;
+    }
+
     &__user {
         display: block;
         width: 50px;
@@ -281,6 +299,7 @@
 }
 
 .act-dropdown {
+    width: min(645px, 100vw);
     position: absolute;
     top: 48px;
     right: -70px;
@@ -290,7 +309,6 @@
 
     &__innder {
         position: relative;
-        width: min(645px, 100vw);
         padding: 30px;
         border-radius: 20px;
         background: var(--act-dropdown-bg-color);
@@ -416,5 +434,53 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__user {
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__seperate {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--cart-item-separate-color);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 12px;
+        padding: 12px 0;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
     }
 }

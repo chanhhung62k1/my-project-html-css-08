@@ -1,0 +1,105 @@
+.payment-card {
+    position: relative;
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    color: #fff;
+    z-index: 0;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+    }
+
+    &__type {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &__number {
+        margin-top: 37px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    &__expred {
+        margin: 0 auto 0 40px;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 175%;
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__circle {
+        --circle-width: 28px;
+        position: relative;
+        width: 42px;
+        height: var(--circle-width);
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: var(--circle-width);
+            height: var(--circle-width);
+            border-radius: 50%;
+            top: 0;
+        }
+
+        &::before {
+            left: 0;
+            background: #f94545;
+            mix-blend-mode: hard-light;
+            z-index: 1;
+        }
+
+        &::after {
+            right: 0;
+            background: #ffb700;
+        }
+    }
+
+    &-new {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 170px;
+        gap: 14px;
+        height: 100%;
+        border: 1px dashed #d2d1d6;
+
+        &__add {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+    }
+}

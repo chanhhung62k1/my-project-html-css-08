@@ -29,16 +29,14 @@
     }
 
     &__top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
         @include abtracts.screen(xl) {
             gap: 10px;
         }
     }
 
     &__heading {
+        display: flex;
+        align-items: center;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
@@ -106,6 +104,14 @@
 
         &--margin {
             margin-top: 10px;
+        }
+
+        &-md--check-out-all {
+            @include abtracts.screen(md) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
         }
     }
 
@@ -203,6 +209,10 @@
             margin: 16px 0;
         }
 
+        &.cart-info__separate--medium {
+            margin: 20px 0;
+        }
+
         &.cart-info__total-row--margin {
             margin: 14px 0;
 
@@ -210,6 +220,10 @@
                 margin: 12px 0;
             }
         }
+    }
+
+    &__checkbox-all {
+        margin: 30px 0;
     }
 }
 
@@ -351,15 +365,23 @@
 
 .cart-item {
     display: flex;
-    column-gap: 30px;
+    // column-gap: 30px;
 
     @include abtracts.screen(md) {
-        column-gap: 16px;
+        // column-gap: 16px;
+    }
+
+    &__separate {
+        margin: 30px 0;
+        height: 1px;
+        width: 100%;
+        background: #d2d1d6;
     }
 
     &__thumb {
         width: 172px;
         height: 172px;
+        margin: 0 30px 0 20px;
         object-fit: contain;
 
         @include abtracts.screen(xxl) {
@@ -375,6 +397,7 @@
         @include abtracts.screen(md) {
             width: 60px;
             height: 60px;
+            margin: 0 14px;
         }
     }
 
@@ -398,6 +421,29 @@
             @include abtracts.screen(md) {
                 margin-top: 16px;
             }
+        }
+    }
+
+    &__check-out-btn {
+        margin-top: auto;
+        min-width: 200px;
+
+        @include abtracts.screen(md) {
+            margin-top: 30px;
+            min-width: 160px;
+        }
+
+        @include abtracts.screen(sm) {
+            margin-top: 30px;
+            min-width: 120px;
+        }
+    }
+
+    &__check-out-all {
+        min-width: 236px;
+
+        @include abtracts.screen(md) {
+            min-width: 240px;
         }
     }
 
@@ -426,6 +472,17 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+    }
+
+    &__ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include abtracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__ctrl {
@@ -523,6 +580,16 @@
         @include abtracts.screen(sm) {
             flex-direction: column;
             align-items: flex-start;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abtracts.screen(xl) {
+            gap: 10px;
         }
     }
 
